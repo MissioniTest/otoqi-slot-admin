@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Otoqi · Email automatiche</title>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .em-grid { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 16px; align-items: start; }
+    .em-lbl { display: block; font-size: 12px; font-weight: 600; margin: 14px 0 4px; color: #4B4741; }
+    .em-in { width: 100%; box-sizing: border-box; padding: 9px 11px; border: 1px solid #D5D1CA; border-radius: 8px; font: inherit; font-size: 14px; background: #fff; color: var(--ink); }
+    textarea.em-in { resize: vertical; line-height: 1.5; min-height: 240px; }
+    .em-in:focus { outline: 2px solid var(--bd); border-color: var(--bd); }
+    .em-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .em-chip { border: 1px solid var(--line); background: #FAF9F7; border-radius: 999px; padding: 3px 10px; font-size: 12px; font-weight: 600; font-family: ui-monospace, monospace; }
+    .em-chip:hover { border-color: var(--bd); }
+    .em-prev { background: #FAF9F7; border: 1px solid var(--line); border-radius: 10px; padding: 14px; white-space: pre-wrap; font-size: 14px; line-height: 1.5; }
+    .em-small { font-size: 12px; color: var(--mute); }
+    .em-ok { color: #03543F; font-weight: 600; font-size: 13px; }
+    .em-ko { color: #9B1C1C; font-weight: 600; font-size: 13px; }
+    @media (max-width: 1000px) { .em-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="wrap" id="app">
+    <div class="msg">Caricamento…</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script type="module" src="js/email.js"></script>
+</body>
+</html>
